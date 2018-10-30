@@ -15,7 +15,6 @@
 
 @Todos:
 
-- 01.Refresher on basics is incomplete.
 - Adding Comments to all files.
 - Adding Readme to all algorithms.
 - Writing tests.
