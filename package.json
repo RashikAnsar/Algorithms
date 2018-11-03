@@ -1,0 +1,27 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms implementation in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RashikAnsar/Algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "javascript",
+    "js"
+  ],
+  "author": "Rashik Ansar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RashikAnsar/Algorithms/issues"
+  },
+  "homepage": "https://github.com/RashikAnsar/Algorithms#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
