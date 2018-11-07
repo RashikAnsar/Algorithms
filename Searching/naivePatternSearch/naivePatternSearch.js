@@ -6,20 +6,22 @@
  */
 function naiveSearch(txt, pat) {
   let count = 0;
+  // Loop over string
   for (let i = 0; i < txt.length; i++) {
+    // loop over pattern
     for (let j = 0; j < pat.length; j++) {
+      // checks characters doesn't match and break
       if (pat[j] !== txt[i + j]) {
         break;
       }
+      // if characters match increase the count
       if (j === pat.length - 1) {
         count++;
       }
     }
   }
+  // return count
   return count;
 }
 
-let x = naiveSearch('aaabbcbaabcabcaaabcaccaabcaade', 'abc');
-console.log(x); //4
-let y = naiveSearch('meow', 'ow');
-console.log(y); //1
+module.exports = naiveSearch;
