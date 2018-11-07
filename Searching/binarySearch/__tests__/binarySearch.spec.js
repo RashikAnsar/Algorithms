@@ -6,14 +6,14 @@ describe('Binary Search tests', () => {
   // console.log(z);
 
   test('should search for given number in the array return index', () => {
-    expect(binarySearch.binarySearch(a, 12)).toBe(1);
+    expect(binarySearch(a, 12)).toBe(1);
   });
 
   test('should search for given number in the array return index', () => {
-    expect(binarySearch.binarySearch(a, 67)).toBe(5);
+    expect(binarySearch(a, 67)).toBe(5);
   });
 
   test('should search for given number in the array return null', () => {
-    expect(binarySearch.binarySearch(a, 245)).toBe(null);
+    expect(binarySearch(a, 245)).toBe(null);
   });
 });

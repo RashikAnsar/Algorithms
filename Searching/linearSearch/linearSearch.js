@@ -20,4 +20,4 @@ function linearSearch(arr, val) {
   return -1;
 }
 
-module.exports = { linearSearch };
+module.exports = linearSearch;

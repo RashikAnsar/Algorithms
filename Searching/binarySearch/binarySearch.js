@@ -28,4 +28,4 @@ function binarySearch(sortedArr, val) {
   return null;
 }
 
-module.exports = { binarySearch };
+module.exports = binarySearch;
