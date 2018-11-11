@@ -35,6 +35,7 @@ class Stack {
    * @returns The data that is removing from the stack
    */
   pop() {
+    // Check underflow condition and throw error
     if (!this.first) {
       throw Error('UNDERFLOW :::: Stack is empty, there is nothing to remove');
     }
@@ -58,15 +59,4 @@ class Stack {
   }
 }
 
-let a = new Stack();
-a.push('alpha');
-a.push('beta');
-a.push('bsgeta');
-a.push('bsgsgdhgdSRHETHSRTeta');
-console.log(a);
-
-// let b = a.peek();
-// console.log(b);
-// a.pop();
-// a.pop();
-// a.pop();
+module.exports = Stack;
