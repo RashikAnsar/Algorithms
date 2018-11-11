@@ -22,5 +22,7 @@
 ### Visualization
 
 [University of SanFrancisco](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
 [Visualgo](https://visualgo.net/en)
+
 [toptal Sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)

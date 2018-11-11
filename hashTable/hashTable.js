@@ -1,20 +1,40 @@
 class HashTable {
+  /**
+   * accepts size of the array
+   *
+   * By default it initalizes with 47
+   * @param {number} size
+   */
   constructor(size = 47) {
     this.keyMap = new Array(size);
   }
 
+  /**
+   * Private method to hash the keys
+   * @param {*} key
+   */
   _hash(key) {
     let total = 0;
-    const WEIRD_PRIME = 31;
+    // Prime number for better hash function
+    const RANDOM_PRIME = 31;
     for (let i = 0; i < Math.min(key.length, 100); i++) {
       let char = key[i];
       let value = char.charCodeAt(0) - 96;
-      total = (total * WEIRD_PRIME + value) % this.keyMap.length;
+      total = (total * RANDOM_PRIME + value) % this.keyMap.length;
     }
     return total;
   }
 
+  /**
+   * Accepts a key and a value
+   *
+   * Stores the key-value pair in the hash table array via separate chaining
+   * @param {*} key
+   * @param {*} value
+   * @returns {HashTable}
+   */
   set(key, value) {
+    // Hash the key
     let index = this._hash(key);
     if (!this.keyMap[index]) {
       this.keyMap[index] = [];
@@ -23,6 +43,14 @@ class HashTable {
     return this;
   }
 
+  /**
+   * Accepts a Key
+   *
+   * Retrieves the key-value pair in the hash table.
+   *
+   * If the key isn't found, returns undefined
+   * @param {*} key
+   */
   get(key) {
     let index = this._hash(key);
     if (this.keyMap[index]) {
@@ -35,6 +63,9 @@ class HashTable {
     return undefined;
   }
 
+  /**
+   * Returns all the values from the hash table as array
+   */
   values() {
     let valArray = [];
     for (let i = 0; i < this.keyMap.length; i++) {
@@ -49,6 +80,9 @@ class HashTable {
     return valArray;
   }
 
+  /**
+   * Returns all the keys from the hash table as array
+   */
   keys() {
     let keysArray = [];
     for (let i = 0; i < this.keyMap.length; i++) {
@@ -64,19 +98,4 @@ class HashTable {
   }
 }
 
-let a = new HashTable();
-a.set('hello world', 'goodbye!!');
-a.set('dogs', 'are cool');
-a.set('cats', 'are fine');
-a.set('i love', 'pizza');
-// console.log(a);
-// let b = a.get('hello world');
-// console.log(b);
-// b = a.get('dogs');
-// console.log(b);
-// b = a.get('flkgmfk');
-// console.log(b);
-let b = a.values();
-console.log(b);
-b = a.keys();
-console.log(b);
+module.exports = HashTable;
