@@ -3,7 +3,7 @@
 ## Contents
 
 - [JavaScript Refresher](0.Refresher)
-- [Linked List](LinkedList)
+- [Linked List](linkedList)
 - [Stack](stack)
 - [Queue](queue)
 - [Searching Algorithms](Searching)
@@ -15,9 +15,9 @@
 
 @Todos:
 
-- Adding Comments to all files.
-- Adding Readme to all algorithms.
-- Writing tests.
+- [ ] Adding Comments to all files.
+- [ ] Adding Readme to all algorithms.
+- [ ] Writing tests.
 
 ### Visualization
 
